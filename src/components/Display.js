@@ -1,27 +1,33 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+/* eslint-disable react/destructuring-assignment */
+
+/* eslint-disable no-useless-constructor */
+
+/* eslint-disable react/prefer-stateless-function */
 
 class Display extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    constructor(props) {
-        super(props)
-    }
+  render() {
+    return (
+      <div>
+        {this.props.calculationResult}
 
-    render() {
-        return (
-            <div>
-                {this.props.calculationResult}
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }
 
 Display.propTypes = {
-    calculationResult: PropTypes.string.isRequired
-}
+  calculationResult: PropTypes.string,
+};
 
 Display.defaultProps = {
-    calculationResult: '0'
-}
+  calculationResult: '0',
+};
 
-export default Display
+export default Display;
