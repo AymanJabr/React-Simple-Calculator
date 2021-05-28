@@ -1,25 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-/* eslint-disable react/destructuring-assignment */
-
-/* eslint-disable no-useless-constructor */
-
-/* eslint-disable react/prefer-stateless-function */
-
-class Display extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        {this.props.calculationResult}
-
-      </div>
-    );
-  }
+function Display(props) {
+  const { calculationResult } = props;
+  return (
+    <div>
+      {' '}
+      {calculationResult}
+      {' '}
+    </div>
+  );
 }
 
 Display.propTypes = {
