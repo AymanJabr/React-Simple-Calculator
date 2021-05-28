@@ -1,6 +1,6 @@
 # Simple React Calculator
 
-In this project I created a simple Calculator using React. The App is made of 2 main components, the Display and the ButtonPanel compo
+In this project I created a simple Calculator using React. The App is made of 2 main components, the Display and the ButtonPanel component. The ButtonPanel makes use of other Button components to display all the necessary buttons.
 
 See Live version of app [here](https://simple-calculator-project.herokuapp.com/) 
 
