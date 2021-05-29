@@ -7,31 +7,29 @@ import calculate from '../logic/calculate';
 /* eslint-enable no-unused-vars */
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { total: null, operation: null, next: null };
 
-  constructor(props){
-    super(props)
-    this.state = {total: null, operation: null, next: null}
-
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = (buttonName) => {
-    let {next, total, operation} = calculate(this.state,buttonName)
+    const { next, total, operation } = calculate(this.state, buttonName);
 
-    this.setState({ total: total, next: next, operation: operation})
+    this.setState({ total, next, operation });
   }
 
-  render(){
+  render() {
+    const { total, next } = this.state;
+
     return (
-    <>
-      <Display total = {this.state.total} next = {this.state.next}/>
-      <ButtonPanel clickHandler = {this.handleClick}/>
-    </>
-    )
+      <>
+        <Display total={total} next={next} />
+        <ButtonPanel clickHandler={this.handleClick} />
+      </>
+    );
   }
-   
-    
-  
 }
 
 export default App;
