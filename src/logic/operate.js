@@ -1,31 +1,22 @@
-import big, { Big } from 'big.js'
+import { Big } from 'big.js';
 
-export default function operate(numberOne, numberTwo, operation){
+export default function operate(numberOne, numberTwo, operation) {
+  const bigOne = new Big(numberOne);
+  const bigTwo = new Big(numberTwo);
 
-    let bigOne = new Big(numberOne)
-    let bigTwo = new Big(numberTwo)
+  switch (operation) {
+    case '+':
+      return bigOne + bigTwo;
+    case '-':
+      return bigOne - bigTwo;
+    case '/':
+      return bigOne / bigTwo;
+    case '*':
+      return bigOne * bigTwo;
+    case '%':
+      return bigOne % bigTwo;
 
-    switch (operation) {
-
-        case '+':
-            return bigOne + bigTwo
-            break;
-        case '-':
-            return bigOne - bigTwo
-            break;
-        case '/':
-            return bigOne / bigTwo
-            break;
-        case '*':
-            return bigOne * bigTwo
-            break;
-        case '%':
-            return bigOne % bigTwo
-            break;
-    
-        default:
-            return nil
-            break;
-    }
-
+    default:
+      return null;
+  }
 }
