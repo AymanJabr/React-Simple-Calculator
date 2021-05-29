@@ -6,13 +6,32 @@ import Display from './Display';
 import calculate from '../logic/calculate';
 /* eslint-enable no-unused-vars */
 
-function App() {
-  return (
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.state = {total: null, operation: null, next: null}
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick = (buttonName) => {
+    let {next, total, operation} = calculate(this.state,buttonName)
+
+    this.setState({ total: total, next: next, operation: operation})
+  }
+
+  render(){
+    return (
     <>
-      <Display />
-      <ButtonPanel />
+      <Display total = {this.state.total} next = {this.state.next}/>
+      <ButtonPanel clickHandler = {this.handleClick}/>
     </>
-  );
+    )
+  }
+   
+    
+  
 }
 
 export default App;
