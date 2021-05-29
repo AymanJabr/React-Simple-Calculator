@@ -1,77 +1,79 @@
+/* eslint-disable no-unused-vars */
+import operate from './operate';
+/* eslint-enable no-unused-vars */
+
 export default function calculate(calculatorData, buttonName) {
-  let myNext = calculatorData.next;
-  let myOperation = calculatorData.operation;
-  let myTotal = calculatorData.total;
+  let { next, operation, total } = calculatorData;
 
   switch (buttonName) {
     case '+/-':
-      myNext *= -1;
-      myTotal *= -1;
+      next *= -1;
+      total *= -1;
       break;
     case 'AC':
-      myNext *= 0;
-      myTotal *= 0;
+      next *= 0;
+      total *= 0;
       break;
     case '%':
-      myOperation = '%';
+      operation = '%';
       break;
     case '/':
-      myOperation = '/';
+      operation = '/';
       break;
 
     case '7':
-      myNext = 7;
+      next = 7;
       break;
     case '8':
-      myNext = 8;
+      next = 8;
       break;
     case '9':
-      myNext = 9;
+      next = 9;
       break;
     case 'X':
-      myOperation = '*';
+      operation = '*';
       break;
 
     case '4':
-      myNext = 4;
+      next = 4;
       break;
     case '5':
-      myNext = 5;
+      next = 5;
       break;
     case '6':
-      myNext = 6;
+      next = 6;
       break;
     case '-':
-      myOperation = '-';
+      operation = '-';
       break;
 
     case '1':
-      myNext = 1;
+      next = 1;
       break;
     case '2':
-      myNext = 2;
+      next = 2;
       break;
     case '3':
-      myNext = 3;
+      next = 3;
       break;
     case '+':
-      myOperation = '+';
+      operation = '+';
       break;
 
     case '0':
-      myNext = 0;
+      next = 0;
       break;
     case '.':
-      myOperation = '.';
+      operation = '.';
       break;
     case '=':
-      myNext = '=';
+      next = '=';
       break;
     default:
-      myNext = null;
-      myTotal = null;
-      myOperation = null;
+      next = null;
+      total = null;
+      operation = null;
       break;
   }
-  return { next: myNext, total: myTotal, operation: myOperation };
+  return { next, total, operation };
 }
