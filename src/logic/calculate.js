@@ -1,6 +1,7 @@
 import operate from './operate';
 
 export default function calculate(calculatorData, buttonName) {
+  console.log(calculatorData);
   let { next, operation, total } = calculatorData;
 
   switch (buttonName) {
@@ -19,13 +20,15 @@ export default function calculate(calculatorData, buttonName) {
       break;
     case '%':
       if (operation) {
-        total = operate(total, next, operation);
+        total = (operate(total, next, operation)).toString();
+        next = '';
       }
       operation = '%';
       break;
     case '/':
       if (operation) {
-        total = operate(total, next, operation);
+        total = (operate(total, next, operation)).toString();
+        next = '';
       }
       operation = '/';
       break;
@@ -71,7 +74,8 @@ export default function calculate(calculatorData, buttonName) {
       break;
     case 'X':
       if (operation) {
-        total = operate(total, next, operation);
+        total = (operate(total, next, operation)).toString();
+        next = '';
       }
       operation = '*';
       break;
@@ -117,7 +121,8 @@ export default function calculate(calculatorData, buttonName) {
       break;
     case '-':
       if (operation) {
-        total = operate(total, next, operation);
+        total = (operate(total, next, operation)).toString();
+        next = '';
       }
       operation = '-';
       break;
@@ -163,7 +168,8 @@ export default function calculate(calculatorData, buttonName) {
       break;
     case '+':
       if (operation) {
-        total = operate(total, next, operation);
+        total = (operate(total, next, operation)).toString();
+        next = '';
       }
       operation = '+';
       break;
@@ -184,23 +190,24 @@ export default function calculate(calculatorData, buttonName) {
     case '.':
       if (operation) {
         if (next) {
-          next += '.';
+          if (!next.includes('.')) next += '.';
         } else {
           next = '.';
         }
-      } else if (total) {
-        total += '.';
+      } else if (total != null) {
+        if (!total.includes('.')) total += '.';
       } else {
         total = '.';
       }
       break;
     case '=':
-      if (operation) {
-        total = operate(total, next, operation);
+      if (operation && next) {
+        total = (operate(total, next, operation)).toString();
+        next = '';
+        operation = null;
       }
-      next = '';
-      operation = null;
       break;
+
     default:
       next = null;
       total = null;

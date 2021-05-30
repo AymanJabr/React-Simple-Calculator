@@ -6,7 +6,7 @@ export default function operate(numberOne, numberTwo, operation) {
 
   switch (operation) {
     case '+':
-      return bigOne + bigTwo;
+      return parseFloat(bigOne) + parseFloat(bigTwo);
     case '-':
       return bigOne - bigTwo;
     case '/':
