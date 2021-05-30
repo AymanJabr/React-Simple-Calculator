@@ -1,8 +1,11 @@
 import operate from './operate';
 
 export default function calculate(calculatorData, buttonName) {
-  console.log(calculatorData);
   let { next, operation, total } = calculatorData;
+
+  if (total === 'Can not divide by 0') {
+    total = null;
+  }
 
   switch (buttonName) {
     case '+/-':
@@ -214,5 +217,12 @@ export default function calculate(calculatorData, buttonName) {
       operation = null;
       break;
   }
+
+  if (operation === '/' && next === '0') {
+    total = 'Can not divide by 0';
+    next = '';
+    operation = '';
+  }
+
   return { next, total, operation };
 }
