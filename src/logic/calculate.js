@@ -22,14 +22,14 @@ export default function calculate(calculatorData, buttonName) {
       operation = null;
       break;
     case '%':
-      if (operation) {
+      if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
       }
       operation = '%';
       break;
     case '/':
-      if (operation) {
+      if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
       }
@@ -76,7 +76,7 @@ export default function calculate(calculatorData, buttonName) {
       }
       break;
     case 'X':
-      if (operation) {
+      if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
       }
@@ -123,7 +123,7 @@ export default function calculate(calculatorData, buttonName) {
       }
       break;
     case '-':
-      if (operation) {
+      if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
       }
@@ -170,7 +170,7 @@ export default function calculate(calculatorData, buttonName) {
       }
       break;
     case '+':
-      if (operation) {
+      if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
       }

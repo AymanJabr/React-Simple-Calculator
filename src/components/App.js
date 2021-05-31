@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 
+import './Styles.css';
+
 import calculate from '../logic/calculate';
 
 function App() {
@@ -22,10 +24,10 @@ function App() {
   };
 
   return (
-    <>
+    <div className="App">
       <Display total={total} next={next} operation={operation} />
       <ButtonPanel clickHandler={handleClick} />
-    </>
+    </div>
   );
 }
 

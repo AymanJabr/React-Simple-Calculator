@@ -6,7 +6,7 @@ function Display(props) {
     total, next, operation,
   } = props;
   return (
-    <div>
+    <div className="Display">
       {total}
       {operation}
       {next}
