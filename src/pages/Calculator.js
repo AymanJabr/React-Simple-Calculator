@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
 
-import App from '../components/App'
+import App from '../components/App';
 import Header from '../components/Header';
 
 import '../components/Styles.css';
 
-
 function Calculator() {
+  return (
+    <div>
 
-    return (
-        <div>
+      <Header />
 
-            <Header />
+      <App />
 
-            <App />            
-
-        </div>
-    )
+    </div>
+  );
 }
 
-
-export default Calculator
-
+export default Calculator;
