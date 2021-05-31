@@ -7,9 +7,9 @@ function Header() {
       <h1>Math Magician</h1>
 
       <div className="Navigation ">
-        <Link to="/">Home </Link>
-        <Link to="/calculator">Calculator</Link>
-        <Link to="/quote">Quote</Link>
+        <Link to="/">Home  </Link>
+        <Link to="/calculator">Calculator  </Link>
+        <Link to="/quote">Quote  </Link>
       </div>
 
     </div>
