@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Correctly renders the Calculator page 1`] = `
+Array [
+  " ",
+  <div>
+    <div
+      className="Header"
+    >
+      <h1>
+        Math Magician
+      </h1>
+      <div
+        className="Navigation "
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home  
+        </a>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator  
+        </a>
+        <a
+          href="/quote"
+          onClick={[Function]}
+        >
+          Quote  
+        </a>
+      </div>
+    </div>
+    <div
+      className="App"
+    >
+      <div
+        className="Display"
+      />
+      <div
+        className="ButtonPanel"
+      >
+        <div
+          className="Group"
+        >
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            AC
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            +/-
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            %
+             
+          </button>
+          <button
+            className="Button   Color"
+            onClick={[Function]}
+            type="button"
+          >
+             
+            /
+             
+          </button>
+        </div>
+        <div
+          className="Group"
+        >
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            7
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            8
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            9
+             
+          </button>
+          <button
+            className="Button   Color"
+            onClick={[Function]}
+            type="button"
+          >
+             
+            X
+             
+          </button>
+        </div>
+        <div
+          className="Group"
+        >
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            4
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            5
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            6
+             
+          </button>
+          <button
+            className="Button   Color"
+            onClick={[Function]}
+            type="button"
+          >
+             
+            -
+             
+          </button>
+        </div>
+        <div
+          className="Group"
+        >
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            1
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            2
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            3
+             
+          </button>
+          <button
+            className="Button   Color"
+            onClick={[Function]}
+            type="button"
+          >
+             
+            +
+             
+          </button>
+        </div>
+        <div
+          className="Group"
+        >
+          <button
+            className="Button DoubleButton "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            0
+             
+          </button>
+          <button
+            className="Button  "
+            onClick={[Function]}
+            type="button"
+          >
+             
+            .
+             
+          </button>
+          <button
+            className="Button   Color"
+            onClick={[Function]}
+            type="button"
+          >
+             
+            =
+             
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Correctly renders the Home page 1`] = `
+Array [
+  " ",
+  <div>
+    <div
+      className="Header"
+    >
+      <h1>
+        Math Magician
+      </h1>
+      <div
+        className="Navigation "
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home  
+        </a>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator  
+        </a>
+        <a
+          href="/quote"
+          onClick={[Function]}
+        >
+          Quote  
+        </a>
+      </div>
+    </div>
+    <h4>
+      Welcome to our Page!
+    </h4>
+    <br />
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui o!cia deserunt mollit anim id est laborum. Ipsu
+    </p>
+  </div>,
+]
+`;
+
+exports[`Correctly renders the Quote page 1`] = `
+Array [
+  " ",
+  <div>
+    <div
+      className="Header"
+    >
+      <h1>
+        Math Magician
+      </h1>
+      <div
+        className="Navigation "
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          Home  
+        </a>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator  
+        </a>
+        <a
+          href="/quote"
+          onClick={[Function]}
+        >
+          Quote  
+        </a>
+      </div>
+    </div>
+    <h3>
+      Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding. –William Paul Thurston
+    </h3>
+  </div>,
+]
+`;

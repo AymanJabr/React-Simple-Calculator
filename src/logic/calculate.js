@@ -11,13 +11,15 @@ export default function calculate(calculatorData, buttonName) {
     case '+/-':
       if (next) {
         next *= -1;
+        next = next.toString();
       } else {
         total *= -1;
+        total = total.toString();
       }
 
       break;
     case 'AC':
-      next = '';
+      next = null;
       total = '';
       operation = null;
       break;
@@ -31,6 +33,7 @@ export default function calculate(calculatorData, buttonName) {
     case '/':
       if (operation && next) {
         total = (operate(total, next, operation)).toString();
+        operation = null;
         next = '';
       }
       operation = '/';
@@ -78,6 +81,7 @@ export default function calculate(calculatorData, buttonName) {
     case 'X':
       if (operation && next) {
         total = (operate(total, next, operation)).toString();
+        operation = null;
         next = '';
       }
       operation = '*';
@@ -125,6 +129,7 @@ export default function calculate(calculatorData, buttonName) {
     case '-':
       if (operation && next) {
         total = (operate(total, next, operation)).toString();
+        operation = null;
         next = '';
       }
       operation = '-';
@@ -173,6 +178,7 @@ export default function calculate(calculatorData, buttonName) {
       if (operation && next) {
         total = (operate(total, next, operation)).toString();
         next = '';
+        operation = null;
       }
       operation = '+';
       break;
@@ -194,13 +200,9 @@ export default function calculate(calculatorData, buttonName) {
       if (operation) {
         if (next) {
           if (!next.includes('.')) next += '.';
-        } else {
-          next = '.';
         }
       } else if (total != null) {
         if (!total.includes('.')) total += '.';
-      } else {
-        total = '.';
       }
       break;
     case '=':
@@ -218,10 +220,10 @@ export default function calculate(calculatorData, buttonName) {
       break;
   }
 
-  if (operation === '/' && next === '0') {
+  if (total === 'Infinity') {
     total = 'Can not divide by 0';
-    next = '';
-    operation = '';
+    next = null;
+    operation = null;
   }
 
   return { next, total, operation };
