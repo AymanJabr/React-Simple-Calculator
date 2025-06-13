@@ -37,7 +37,7 @@ export function operate(
         }
         throw new Error(`Unknown operation '${operation}'`);
     } catch (error) {
-        return 'Error';
+        return `Error: ${error}`;
     }
 }
 

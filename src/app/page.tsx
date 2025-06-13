@@ -10,19 +10,6 @@ interface HistoryEntry {
     result: string;
 }
 
-function getOperationString(state: CalculatorState) {
-    if (state.total && state.operation && state.next) {
-        return `${state.total} ${state.operation} ${state.next}`;
-    }
-    if (state.total && state.operation) {
-        return `${state.total} ${state.operation}`;
-    }
-    if (state.total) {
-        return `${state.total}`;
-    }
-    return '';
-}
-
 export default function CalculatorPage() {
     const [state, setState] = useState<CalculatorState>({
         total: null,
