@@ -1,42 +1,48 @@
-# Simple React Calculator
+# React Simple Calculator (Next.js Edition)
 
-In this project I created a simple Calculator using React. The App is made of 2 main components, the Display and the ButtonPanel component. The ButtonPanel makes use of other Button components to display all the necessary buttons.
+A modern, responsive calculator app built with Next.js, TypeScript, and Tailwind CSS. This project is a complete rewrite of a classic React calculator, now featuring a live operation display, calculation history, and a beautiful, dark-themed UI.
 
-See Live version of app [here](https://simple-calculator-project.herokuapp.com/) 
+## Features
 
-## Built With
-
-- JavaScript
-- React
+- **Live Operation Display:** See the full operation you are typing (e.g., `266 + 9`) above the result.
+- **Calculation History:** All previous operations and results are shown in a sidebar.
+- **Clickable History:** Click any previous result to reuse it instantly in a new calculation.
+- **Robust Arithmetic:** Handles edge cases, negative numbers, and floating-point precision using `big.js`.
+- **Responsive & Accessible:** Works great on desktop and mobile, with accessible color contrast and keyboard navigation.
 
 ## Getting Started
 
-To get a local copy up and running follow these steps.
+### Prerequisites
+- [pnpm](https://pnpm.io/) (recommended)
+- Node.js 18+
 
-1. Clone or copy repository, and navigate to the the `development` branch
+### Installation
 
-2. run `npm install` to install node packages
+```bash
+pnpm install
+```
 
-3. run `npm start` to start the app in the `localhost:3000`, this will start the app in a new browser tab.
+### Running the Development Server
 
+```bash
+pnpm dev
+```
 
-## AUTHOR
+Open [http://localhost:3000](http://localhost:3000) in your browser to use the calculator.
 
-**AYMAN JABR**
+## Tech Stack
+- [Next.js](https://nextjs.org/) (App Router, Turbopack)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [big.js](https://github.com/MikeMcl/big.js/) (for precise arithmetic)
 
-- Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AymanJabr/)
-- Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ayman-jabr/)
+## Project Structure
+- `src/app/page.tsx` — Main calculator page
+- `src/components/calculator/` — Calculator UI components
+- `src/lib/logic.ts` — Calculator logic and state management
 
+## Customization
+Feel free to fork or clone this project and adapt the UI, logic, or features to your needs!
 
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## License :memo:
-# Released under MIT License
-
-Copyright (c) 2021 Ayman Jabr.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+## License
+MIT
